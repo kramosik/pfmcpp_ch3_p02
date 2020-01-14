@@ -58,9 +58,9 @@ struct T
 {
     T(int v, const char* name) : m_value(v), m_name(name) {} // 1
     // 2
-    int m_value;
+    int m_value; FIXME in the JUCE coding standards, using '_' in member variable names is frowned upon.  
     // 3
-    std::string m_name;
+    std::string m_name; FIXME in the JUCE coding standards, using '_' in member variable names is frowned upon. change 'name' to something else in your constructor params so you don't need to rename this member variable as you have done.
 };
 
 struct Comparator // 4
@@ -80,7 +80,7 @@ struct Comparator // 4
 
 struct U
 {
-    float val1 {0}, val2 {0};
+    float val1 {0}, val2 {0}; 
     float updateValue(const float* updatedValue) // 12
     {
         if (!updatedValue)
