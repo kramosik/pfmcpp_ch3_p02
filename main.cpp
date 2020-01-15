@@ -56,11 +56,11 @@
 #include <string>
 struct T
 {
-    T(int v, const char* name) : m_value(v), m_name(name) {} // 1
+    T(int v, const char* name) : mValue(v), mName(name) {} // 1
     // 2
-    int m_value; FIXME in the JUCE coding standards, using '_' in member variable names is frowned upon.  
+    int mValue;
     // 3
-    std::string m_name; FIXME in the JUCE coding standards, using '_' in member variable names is frowned upon. change 'name' to something else in your constructor params so you don't need to rename this member variable as you have done.
+    std::string mName;
 };
 
 struct Comparator // 4
@@ -70,9 +70,9 @@ struct Comparator // 4
         if (!a || !b)
             return nullptr;
 
-        if (a->m_value < b->m_value)
+        if (a->mValue < b->mValue)
             return a;
-        if (a->m_value > b->m_value)
+        if (a->mValue > b->mValue)
             return b;
         return nullptr;
     }
@@ -80,7 +80,7 @@ struct Comparator // 4
 
 struct U
 {
-    float val1 {0}, val2 {0}; 
+    float val1 {0}, val2 {0};
     float updateValue(const float* updatedValue) // 12
     {
         if (!updatedValue)
@@ -137,7 +137,7 @@ int main()
     auto* smaller = f.compare(&t1, &t2); // 8
     if (smaller)
     {
-        std::cout << "the smaller one is " << smaller->m_name << std::endl; // 9
+        std::cout << "the smaller one is " << smaller->mName << std::endl; // 9
     }
 
     U u1;
