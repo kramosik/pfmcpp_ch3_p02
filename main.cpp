@@ -1,53 +1,21 @@
 /*
- Chapter 3 Part 2 - Make a new Repl.it
- Pointers
+ Project 6: Part 2 / 2
+ Video: Chapter 3 Part 3
 
- Task: replace all of the <place holder> with proper names and types that will
- make this program compile and run.
+Create a branch named Part2
 
- steps:
-
- 0) press the Run button and work your way through all of the error messages.
-
- 1) finish implementing the constructor for T. the constructor parameters need
- to initialize 2) and 3)
-
- 2) provide a member variable in T of a type of your choosing that works with
- the compare function below T note the name of the variable used in the compare
- function
-
- 3) provide a member variable of type std::string in T that works with the
- *first* cout statement in main(). note the name of the variable used in the
- *first* cout statement in main()
-
- 4) finish defining the struct with the compare function
- 5) provide proper types for the arguments to compare, and a proper return value
-         be sure to make it work with the pointer semantics being used in the if
- statements. see 8) for a hint about what type to use.
-
- 6) finish instantiating the two T instances being declared in main(), based on
- the constructor you finished implementing in T
-
- 7) Declare 'f' with the proper type so the call to f.compare works
-
- 8) call f.compare() with the correct arguments, based on 2) and 5)
-
- 9) correct the cout that uses bigger's member variable with some safe pointer
- usage. the possible return values of the compare() function should give you a
- hint.
-
- 10) complete the implementation for the static function in <structName2>
-
- 11) call the <structName2> static function correctly in main()
-
- 12) replicate the functionality of <structName2>'s static function by
- implementing a member function in U that does the same thing.
-
- After you finish, click the [run] button.  Clear up any errors or warnings as
- best you can.
-
- Commit your changes by clicking on the Source Control panel on the left,
- entering a message, and click [Commit and push].
+ References
+ 
+ 
+ 1) convert all of the pointer usage (except for 'const char*') to reference types or const reference types ** WHERE POSSIBLE **
+    hint: There is no reference equivalent to nullptr.  
+    So don't try to convert nullptr, if nullptr is being returned anywhere
+ 
+ 2) After you finish, click the [run] button.  Clear up any errors or warnings as best you can.
+ 
+ Commit your changes by clicking on the Source Control panel on the left, entering a message, and click [Commit and push].
+ 
+ Send me the the link to your repl.it in a DM on Slack
 
  Wait for my code review.
  */
