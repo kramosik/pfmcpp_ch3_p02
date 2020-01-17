@@ -134,8 +134,7 @@ int main()
     T t2(4, "4"); // 6
 
     Comparator f;                        // 7
-    auto* smaller = f.compare(&t1, &t2); // 8
-    if (smaller)
+    if (auto* smaller = f.compare(&t1, &t2))
     {
         std::cout << "the smaller one is " << smaller->name << std::endl; // 9
     }
