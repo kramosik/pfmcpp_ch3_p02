@@ -56,11 +56,11 @@
 #include <string>
 struct T
 {
-    T(int v, const char* name) : mValue(v), mName(name) {} // 1
+    T(int v, const char* displayName) : value(v), name(displayName) {} // 1
     // 2
-    int mValue;
+    int value;
     // 3
-    std::string mName;
+    std::string name;
 };
 
 struct Comparator // 4
@@ -70,9 +70,9 @@ struct Comparator // 4
         if (!a || !b)
             return nullptr;
 
-        if (a->mValue < b->mValue)
+        if (a->value < b->value)
             return a;
-        if (a->mValue > b->mValue)
+        if (a->value > b->value)
             return b;
         return nullptr;
     }
@@ -137,7 +137,7 @@ int main()
     auto* smaller = f.compare(&t1, &t2); // 8
     if (smaller)
     {
-        std::cout << "the smaller one is " << smaller->mName << std::endl; // 9
+        std::cout << "the smaller one is " << smaller->name << std::endl; // 9
     }
 
     U u1;
